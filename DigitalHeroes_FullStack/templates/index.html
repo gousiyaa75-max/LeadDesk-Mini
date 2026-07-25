@@ -1,0 +1,280 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeadDesk Mini | Smart Lead Management</title>
+    <meta name="description" content="LeadDesk Mini helps businesses capture and convert leads with a modern, responsive experience.">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container nav-wrap">
+            <a href="#home" class="brand">LeadDesk Mini</a>
+            <button class="nav-toggle" type="button" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#process">Process</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#contact">Contact</a>
+                <a href="/admin/">Admin</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="home">
+        {% if messages %}
+            <div class="container message-stack">
+                {% for message in messages %}
+                    <div class="alert-success" role="alert">{{ message }}</div>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        <section class="hero-section">
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <div class="hero-buttons">
+                         <a href="https://github.com/YOUR_USERNAME/YOUR_REPO"
+       target="_blank"
+       class="btn-outline">
+
+        GitHub
+
+    </a>
+
+    <a href="https://YOUR_RENDER_LINK.onrender.com"
+       target="_blank"
+       class="btn-outline">
+
+    #Live Demo#
+
+    </a>
+
+</div>
+
+    <a href="#contact" class="btn">
+        Get Started
+    </a>
+
+   
+                    <span class="eyebrow">Trusted by growth-focused teams</span>
+                    <h1>Turn every inquiry into a qualified opportunity.</h1>
+                    <p>LeadDesk Mini helps you collect, organize, and follow up on new leads with a polished experience built on Django.</p>
+                    <div class="hero-actions">
+                        <a href="#contact" class="btn btn-primary">Book a Demo</a>
+                        <a href="#services" class="btn btn-secondary">Explore Services</a>
+                    </div>
+                    <ul class="hero-highlights">
+                        <li>⚡ Instant lead capture</li>
+                        <li>📈 Better follow-up workflows</li>
+                        <li>🔒 Secure form handling</li>
+                    </ul>
+                </div>
+                <div class="hero-card">
+                    <h3>Why teams love LeadDesk Mini</h3>
+                    <p>Modern UI, clean structure, and a reliable lead submission experience for your internship project or startup MVP.</p>
+                    <div class="stat-row">
+                        <div>
+                            <strong>24/7</strong>
+                            <span>Lead readiness</span>
+                        </div>
+                        <div>
+                            <strong>100%</strong>
+                            <span>Mobile friendly</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="why-us">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow">Why choose us</span>
+                    <h2>Everything you need for a modern lead workflow.</h2>
+                </div>
+                <div class="card-grid">
+                    <article class="card">
+                        <h3>⚡ Fast Capture</h3>
+                        <p>Collect new inquiries in seconds with an elegant, minimal form design.</p>
+                    </article>
+                    <article class="card">
+                        <h3>📊 Clear Tracking</h3>
+                        <p>Manage each lead from submission to follow-up without leaving the dashboard.</p>
+                    </article>
+                    <article class="card">
+                        <h3>🔒 Secure Processing</h3>
+                        <p>Server-side validation and Django’s built-in protections keep your workflow reliable.</p>
+                    </article>
+                    <article class="card">
+                        <h3>📱 Responsive Layout</h3>
+                        <p>Your landing page feels polished on desktops, tablets, and mobile devices.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-alt" id="services">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow">Services</span>
+                    <h2>Built for ambitious teams and internship demos.</h2>
+                </div>
+                <div class="card-grid">
+                    <article class="card">
+                        <h3>Lead Capture</h3>
+                        <p>Capture essential details such as name, email, budget, and project goals from every visitor.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Client Follow-up</h3>
+                        <p>Use the admin panel to track status and move opportunities from New to Contacted to Closed.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Growth Ready</h3>
+                        <p>Perfect for startups, agencies, and learning projects that want a production-ready base.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="process">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow">Process</span>
+                    <h2>A simple flow from interest to conversion.</h2>
+                </div>
+                <div class="steps-grid">
+                    <article class="step-card">
+                        <span class="step-number">01</span>
+                        <h3>Share your need</h3>
+                        <p>Visitors complete the lead form with the details of their project and budget.</p>
+                    </article>
+                    <article class="step-card">
+                        <span class="step-number">02</span>
+                        <h3>Review instantly</h3>
+                        <p>Admins can review the submission in one place and update its status quickly.</p>
+                    </article>
+                    <article class="step-card">
+                        <span class="step-number">03</span>
+                        <h3>Move to action</h3>
+                        <p>Once contacted, the opportunity can be closed after follow-up and confirmation.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-alt" id="testimonials">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow">Testimonials</span>
+                    <h2>What people appreciate most.</h2>
+                </div>
+                <div class="card-grid">
+                    <article class="card quote-card">
+                        <p>“The design feels polished and the form is incredibly easy to use.”</p>
+                        <strong>Alicia, Product Manager</strong>
+                    </article>
+                    <article class="card quote-card">
+                        <p>“It gave us a strong foundation for showcasing our lead workflow in a professional way.”</p>
+                        <strong>Marcus, Freelancer</strong>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="pricing">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow">Pricing</span>
+                    <h2>Flexible for a prototype or a ready-made client pitch.</h2>
+                </div>
+                <div class="pricing-grid">
+                    <article class="pricing-card">
+                        <h3>Starter</h3>
+                        <p class="price">$49</p>
+                        <p>Perfect for a simple portfolio or internship submission.</p>
+                        <ul>
+                            <li>Single-page landing experience</li>
+                            <li>Lead form and database storage</li>
+                            <li>Responsive UI</li>
+                        </ul>
+                    </article>
+                    <article class="pricing-card featured">
+                        <h3>Growth</h3>
+                        <p class="price">$99</p>
+                        <p>Ideal for showcasing a professional client-ready workflow.</p>
+                        <ul>
+                            <li>Admin lead management</li>
+                            <li>Status workflow</li>
+                            <li>Custom styling and messaging</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-alt" id="contact">
+            <div class="container contact-grid">
+                <div>
+                    <span class="eyebrow">Contact</span>
+                    <h2>Let’s build your next lead experience.</h2>
+                    <p>Share your goals and we will help you turn interest into action with a polished submission flow.</p>
+                </div>
+                <div class="form-card">
+                    <form method="post" id="leadForm" novalidate>
+                        {% csrf_token %}
+                        {% if form.non_field_errors %}
+                            <div class="form-error">{{ form.non_field_errors }}</div>
+                        {% endif %}
+
+                        <div class="form-group">
+                            <label for="{{ form.name.id_for_label }}">Name</label>
+                            {{ form.name }}
+                            {% if form.name.errors %}<div class="form-error">{{ form.name.errors|striptags }}</div>{% endif %}
+                        </div>
+
+                        <div class="form-group">
+                            <label for="{{ form.email.id_for_label }}">Email</label>
+                            {{ form.email }}
+                            {% if form.email.errors %}<div class="form-error">{{ form.email.errors|striptags }}</div>{% endif %}
+                        </div>
+
+                        <div class="form-group">
+                            <label for="{{ form.budget.id_for_label }}">Budget</label>
+                            {{ form.budget }}
+                            {% if form.budget.errors %}<div class="form-error">{{ form.budget.errors|striptags }}</div>{% endif %}
+                        </div>
+
+                        <div class="form-group">
+                            <label for="{{ form.message.id_for_label }}">Message</label>
+                            {{ form.message }}
+                            {% if form.message.errors %}<div class="form-error">{{ form.message.errors|striptags }}</div>{% endif %}
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block">Submit Lead</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div>
+                <h3>LeadDesk Mini</h3>
+                <p>Helping businesses capture and convert leads with a modern, reliable experience.</p>
+            </div>
+            <p>© 2026 LeadDesk Mini. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
